@@ -19,20 +19,33 @@ public class Arrays {
 		}
 	}
 	
-	public String printOneArray(int[] array){
+	public String printOneArray2(int[] array){
 		String result = "";
+		int comma = 0;
 		for (int i : array){
-			result = result + "[" + i + "]";
+			result = result +i;
+			if (comma < array.length-1){
+				result += ",";
+				comma++;
+			}
 		}
 		return result;
 		
+	}
+	
+	public String printOneArray(int[] array){
+		String result = "";
+		for (int i : array){
+			result = result +"{"+ i +"}";			
+		}
+		return result;
 	}
 	
 	@Override
 	public String toString(){
 		String result = "";
 		for(int[] i : this.arr){
-			result = result + "[" + printOneArray(i) + "]\n";		
+			result = result + "[" + printOneArray2(i) + "]\n";		
 		}
 		return result;
 	}
