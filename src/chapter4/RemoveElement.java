@@ -40,11 +40,26 @@ public class RemoveElement{
 		list.add(p3);
 		list.add(p4);
 		
+		System.out.println(list.get(0));
+		System.out.println(list.get(1));
+		System.out.println(list.get(2));
+		System.out.println(list.get(3));
+		
 		list.remove(new Person("Vlad"));
+		
+		
 		
 		for(Person p : list){
 			System.out.println(p);
 		}
+		
+		//elements are rearranged after remove method
+		System.out.println(list.get(0));
+		System.out.println(list.get(1));
+		System.out.println(list.get(2));
+		//System.out.println(list.get(3));
+		
+
 		
 		
 	}
