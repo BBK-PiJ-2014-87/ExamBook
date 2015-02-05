@@ -40,10 +40,16 @@ public class RemoveElement{
 		list.add(p3);
 		list.add(p4);
 		
-		System.out.println(list.get(0));
-		System.out.println(list.get(1));
-		System.out.println(list.get(2));
-		System.out.println(list.get(3));
+		Object newList = list.clone();
+		System.out.println(newList.getClass());
+		
+		// System.out.println(newList.size()); -- cant call size() method on object
+		System.out.println(newList);
+		System.out.println(list);
+		//after casting can call size() of array
+		ArrayList<Person> list2 = (ArrayList<Person>)newList;
+		System.out.println(list2);
+		System.out.println(list2.size());
 		
 		list.remove(new Person("Vlad"));
 		
@@ -57,6 +63,7 @@ public class RemoveElement{
 		System.out.println(list.get(0));
 		System.out.println(list.get(1));
 		System.out.println(list.get(2));
+		System.out.println(list.size());
 		//System.out.println(list.get(3));
 		
 
