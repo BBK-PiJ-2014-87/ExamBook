@@ -29,12 +29,15 @@ public class MultipleReturn {
 			System.out.println("Return value now is: " + strVal);
 		}
 		return strVal;
-
+		
 	}
 
 	public static void main(String[] args) {
 		MultipleReturn var = new MultipleReturn();
-		System.out.println("In main:" + var.getInt());
+		System.out.println("In main: " + var.getInt());
+		
+		MultipleReturn var2 = new MultipleReturn();
+		System.out.println("In Main: " + var2.getStringBuilder());
 	}
 
 }
